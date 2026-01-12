@@ -10,5 +10,13 @@ public class re {
         }
         boolean result = text.matches(re);
         System.out.println(result);
+         String re_zip = "^\\d{5}(-\\d{4})?$";
+        String[] zips = {"07675", "10001-1234", "1234", "ABCDE"};
+        for (String zip : zips) {
+            boolean matches = zip.matches(re_zip);
+            System.out.println(zip + " -> " + matches);
+        }
     }
+   
+    
 }
