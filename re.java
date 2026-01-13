@@ -10,12 +10,21 @@ public class re {
         }
         boolean result = text.matches(re);
         System.out.println(result);
-         String re_zip = "^\\d{5}(-\\d{4})?$";
+        String re_zip = "^\\d{5}(-\\d{4})?$";
         String[] zips = {"07675", "10001-1234", "1234", "ABCDE"};
         for (String zip : zips) {
             boolean matches = zip.matches(re_zip);
             System.out.println(zip + " -> " + matches);
         }
+        String re_cap = "^[A-Z].*";
+
+        String[] words = {"Hello", "world", "Java", "java", "APPLE", "1Test"};
+
+        for (String word : words) {
+            boolean matches = word.matches(re_cap);
+            System.out.println(word + " -> " + matches);
+        }
+
     }
    
     
